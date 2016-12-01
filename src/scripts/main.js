@@ -131,7 +131,7 @@
       $(".humidity").text("Humidity: " + (current.humidity * 100).toFixed(0) + "%");
       $(".wind").text("Wind: " + current.windSpeed + " m/s");
       $(".pressure").text("Pressure: " + current.pressure + " hPa");
-      $(".local-time").text("Local Time: " + convertTimeStamp(current.time).time);
+      $(".last-updated").text("Last Updated: " + convertTimeStamp(current.time).time);
 
       App.icons.push(current.icon);
 
