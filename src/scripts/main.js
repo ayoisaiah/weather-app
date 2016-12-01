@@ -302,4 +302,5 @@
           time: hours + ":" + minutes
         };
     }
+    
 })();
