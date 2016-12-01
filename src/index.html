@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Local Weather</title>
+
+  <!-- <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--build:css css/app.min.css-->
+  <link rel="stylesheet" href="stylesheet/css/dialog-polyfill.css">
+  <link rel="stylesheet" href="stylesheet/css/main.css">
+  <!-- endbuild -->
+</head>
+<body>
+    <dialog class="mdl-dialog" id="dialog">
+      <h4 class="mdl-dialog__title">Find a Forecast</h4>
+      <div class="mdl-dialog__content">
+        <form action="#" id="search-form">
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" id="search-field">
+            <label class="mdl-textfield__label" for="search-field">Search for location or keyword</label>
+          </div>
+        </form>
+      </div>
+      <div class="mdl-dialog__actions">
+        <button type="button" class="mdl-button search-button">Search</button>
+        <button type="button" class="mdl-button dialog-close">Close</button>
+      </div>
+    </dialog>
+
+  <div class="loading-indicator">
+    <div class="mdl-spinner mdl-js-spinner is-active spinner"></div>
+  </div>
+
+  <div class="main">
+
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-tabs">
+      <header class="mdl-layout__header">
+
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title location"></span>
+
+          <div class="mdl-layout-spacer"></div>
+
+          <nav class="mdl-navigation">
+
+            <a class="mdl-navigation__link" id="refresh-weather">
+              <i class="material-icons">refresh</i>
+            </a>
+
+            <a id="search-icon" class="mdl-navigation__link">
+              <i class="material-icons">search</i>
+            </a>
+
+            <a class="mdl-navigation__link" id="temperature-unit">
+              <i class="material-icons">more_vert</i>
+            </a>
+
+            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+    for="temperature-unit">
+              <li class="mdl-menu__item">
+                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+                  <input type="radio" id="option-1" class="mdl-radio__button celsius" name="options" value="celsius" checked>
+                  <span class="mdl-radio__label">Celsius</span>
+                </label>
+              </li>
+
+              <li class="mdl-menu__item">
+                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
+                  <input type="radio" id="option-2" class="mdl-radio__button fahrenheit" name="options" value="fahrenheit">
+                  <span class="mdl-radio__label">Fahrenheit</span>
+                </label>
+
+              </li>
+
+            </ul>
+
+
+          </nav>
+
+        </div>
+
+        <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+           <a href="#fixed-tab-1" class="mdl-layout__tab is-active">Today</a>
+           <a href="#fixed-tab-2" class="mdl-layout__tab">Tomorrow</a>
+           <a href="#fixed-tab-3" class="mdl-layout__tab">Later</a>
+        </div>
+
+      </header>
+
+      <section class="mdl-layout__content content-area">
+
+
+        <div class="mdl-layout__tab-panel is-active tab-panel" id="fixed-tab-1">
+
+          <div class="today tab-content">
+            <div class="mdl-grid tab-row special">
+              <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--4-col">
+
+                <div class="basic-weather-info">
+                  <div class="main-info">
+                    <span class="temperature">0℃</span>
+                    <span class="description">No data</span>
+                  </div>
+                  <span class="wind">Wind: 0 m/s</span>
+                  <span class="pressure">Pressure: 0 hPa</span>
+                  <span class="humidity">Humidity: 0%</span>
+                  <span class="local-time">No data</span>
+                </div>
+
+              </div>
+              <div class="mdl-cell mdl-cell--2-offset-desktop mdl-cell--4-col">
+
+                <div class="animated-icon">
+                  <canvas id="canvas" class="canvas" width="400" height="400"></canvas>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="today-grid">
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="mdl-layout__tab-panel tab-panel" id="fixed-tab-2">
+
+          <div class="tomorrow tab-content">
+
+          </div>
+
+        </div>
+
+        <div class="mdl-layout__tab-panel tab-panel" id="fixed-tab-3">
+
+          <div class="later tab-content">
+
+          </div>
+
+        </div>
+
+         <footer class="footer">
+             <span class="credit">Developed by <a href="https://ayoisaiah.com">Ayo Isaiah</a>.
+         </footer>
+
+      </section>
+
+       <a href="https://github.com/ayoisaiah/weather-app" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">View Source</a>
+
+    </div>
+
+
+
+
+  </div>
+
+  <!--build:js js/app.min.js -->
+  <script src="scripts/dialog-polyfill.js"></script>
+  <script src="scripts/material.min.js"></script>
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/skycons/skycons.js"></script>
+  <script src="scripts/babel/main.js"></script>
+  <!-- endbuild -->
+
+</body>
+</html>
