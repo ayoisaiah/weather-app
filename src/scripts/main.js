@@ -238,7 +238,7 @@
       $("#search-form").submit();
     });
 
-    $("#refresh-weather").click(function (e) {
+    $(".refresh-weather").click(function (e) {
       e.preventDefault();
       getWeatherInfo(App.city.longitude, App.city.latitude);
     });
@@ -262,7 +262,7 @@
         dialogPolyfill.registerDialog(dialog);
       }
 
-      $("#search-icon").click(function(e) {
+      $(".search-icon").click(function(e) {
         dialog.showModal();
       });
 
