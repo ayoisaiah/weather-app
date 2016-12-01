@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Local Weather</title>
+  <title>Weather Forecast</title>
 
   <!-- <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet"> -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -41,13 +41,13 @@
 
           <div class="mdl-layout-spacer"></div>
 
-          <nav class="mdl-navigation">
+          <nav class="mdl-navigation mdl-layout--large-screen-only">
 
-            <a class="mdl-navigation__link" id="refresh-weather">
+            <a class="mdl-navigation__link refresh-weather">
               <i class="material-icons">refresh</i>
             </a>
 
-            <a id="search-icon" class="mdl-navigation__link">
+            <a class="mdl-navigation__link search-icon">
               <i class="material-icons">search</i>
             </a>
 
@@ -77,6 +77,7 @@
 
           </nav>
 
+
         </div>
 
         <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
@@ -86,6 +87,35 @@
         </div>
 
       </header>
+
+      <div class="mdl-layout__drawer mdl-layout--small-screen-only">
+        <span class="mdl-layout-title">Weather Forecast</span>
+        <nav class="mdl-navigation">
+
+          <a class="mdl-navigation__link refresh-weather">
+            Refresh
+          </a>
+
+          <a class="mdl-navigation__link search-icon">
+            Search
+          </a>
+
+          <a class="mdl-navigation__link">
+            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-3">
+              <input type="radio" id="option-3" class="mdl-radio__button celsius" name="unit" value="celsius" checked>
+              <span class="mdl-radio__label">Celsius</span>
+            </label>
+          </a>
+
+          <a class="mdl-navigation__link">
+            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-4">
+              <input type="radio" id="option-4" class="mdl-radio__button fahrenheit" name="unit" value="fahrenheit">
+              <span class="mdl-radio__label">Fahrenheit</span>
+            </label>
+          </a>
+        </nav>
+      </div>
+
 
       <section class="mdl-layout__content content-area">
 
@@ -142,7 +172,7 @@
         </div>
 
          <footer class="footer">
-             <span class="credit">Developed by <a href="https://ayoisaiah.com">Ayo Isaiah</a>.
+             <span class="credit">Developed by <a href="https://ayoisaiah.com">Ayo Isaiah</a>. Powered by <a href="http://darksky.net">Dark Sky</a>.</span>
          </footer>
 
       </section>
