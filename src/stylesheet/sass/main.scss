@@ -33,6 +33,11 @@ body {
   border-bottom: 1px solid rgb(255,255,255);
 }
 
+.mdl-layout__drawer-button {
+  color: #fff;
+  opacity: 0.87;
+}
+
 .tab-panel {
   padding-bottom: 70px;
 }
@@ -128,6 +133,11 @@ body {
 
 
 @media screen and (max-width: 1024px) {
+
+  header.mdl-layout__header {
+    display: block;
+  }
+
   .animated-icon > canvas {
     width: 200px;
     height: 200px;
@@ -143,5 +153,11 @@ body {
 
   #view-source {
     display: none;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #dialog {
+    width: 300px;
   }
 }
