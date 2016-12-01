@@ -278,7 +278,7 @@
       if ($(".celsius").is(":checked")) {
         return ((temp - 32) * (5/9)).toFixed(0) + "°C";
       } else {
-        return (temp.toFixed(0)  + "°F");
+        return (temp.toFixed(0)  + "F");
       }
     }
 
