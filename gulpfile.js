@@ -11,15 +11,6 @@ const cssnano = require("gulp-cssnano");
 const concat = require("gulp-concat");
 const rename = require("gulp-rename");
 
-const jsfiles = "src/vendor/mdl/scripts/**/*.js";
-
-gulp.task("mdl", function () {
-	return gulp.src(jsfiles)
-	.pipe(concat("mdl.js"))
-  .pipe(uglify())
-	.pipe(gulp.dest("src/scripts"));
-});
-
 gulp.task("sass", function () {
 	return gulp.src("src/stylesheet/sass/main.scss")
 	.pipe(sass())
@@ -54,10 +45,10 @@ gulp.task("useref", function (){
 gulp.task("watch", ["browserSync", "sass", "babel", "useref"], function() {
 	gulp.watch("src/scripts/main.js", ["babel", "useref"]);
 	gulp.watch("src/stylesheet/sass/**/*.scss", ["sass", "useref"]);
+	gulp.watch("src/vendor/mdl/**/*.scss", ["sass", "useref"]);
   gulp.watch("src/index.html", ["useref"]);
 	gulp.watch("build/index.html", browserSync.reload);
 	gulp.watch("build/js/app.min.js", browserSync.reload);
 });
 
-gulp.task("default", ["mdl", "watch"], function() {
-});
+gulp.task("default", ["watch"], function() {});
