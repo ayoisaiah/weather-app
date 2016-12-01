@@ -3,7 +3,7 @@
 This is the fourth project for Free Code Camp's Front-End certificate.
 
 Completed On: 27 March 2016  
-Last Updated: 01 December 2016
+Last Updated: 02 December 2016
 
 ## Objectives
 
@@ -20,3 +20,5 @@ Build an app that is functionally similar to this: http://codepen.io/FreeCodeCam
 - I can push a button to toggle between Fahrenheit and Celsius.
 
 ## My Work
+
+![Weather App](https://cdn.rawgit.com/ayoisaiah/weather-app/master/screenshot.png)
