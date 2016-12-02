@@ -4,9 +4,7 @@
 
   $(document).ajaxStart(function () {
     $(".loading-indicator").fadeIn();
-  });
-
-  $(document).ajaxStop(function () {
+  }).ajaxStop(function () {
     $(".loading-indicator").fadeOut();
   });
 
@@ -302,5 +300,5 @@
           time: hours + ":" + minutes
         };
     }
-    
+
 })();
