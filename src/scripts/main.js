@@ -192,33 +192,33 @@
 
     function updateDom (data, element) {
 
-      $(element).append('<div class="mdl-grid tab-row">' +
-    '<div class="mdl-cell mdl-cell--3-offset-desktop mdl-cell--6-col">' +
-        '<div class="mdl-card weather-card mdl-shadow--2dp">' +
-            '<div class="mdl-grid full-width">' +
-              '<div class="mdl-cell mdl-cell--6-col">' +
-                '<div class="basic-weather-info">' +
-                  '<div class="main-info">' +
-                    '<span class="date">' + data.currentDay + " " + data.date + " - " + data.time + '</span>' +
-                    '<span class="description">' + data.description + '</span>' +
-                  '</div>' +
-                  '<span class="temperature">' + data.temperature + '</span>' +
-                  '<span class="wind">' + data.wind + '</span>' +
-                  '<span class="pressure">' + data.pressure + '</span>' +
-                  '<span class="humidity">' + data.humidity + '</span>' +
-                '</div>' +
-              '</div>' +
-              '<div class="mdl-cell mdl-cell--6-col">' +
+      $(element).append(`<div class="mdl-grid tab-row">
+    <div class="mdl-cell mdl-cell--3-offset-desktop mdl-cell--6-col">
+        <div class="mdl-card weather-card mdl-shadow--2dp">
+            <div class="mdl-grid full-width">
+              <div class="mdl-cell mdl-cell--6-col">
+                <div class="basic-weather-info">
+                  <div class="main-info">
+                    <span class="date">  ${data.currentDay} ${data.date} - ${data.time}  </span>
+                    <span class="description">  ${data.description}  </span>
+                  </div>
+                  <span class="temperature">  ${data.temperature}  </span>
+                  <span class="wind">  ${data.wind}  </span>
+                  <span class="pressure">  ${data.pressure}  </span>
+                  <span class="humidity">  ${data.humidity}  </span>
+                </div>
+              </div>
+              <div class="mdl-cell mdl-cell--6-col">
 
-                '<div class="animated-icon">' +
-                  '<canvas class="canvas" width="200" height="200"></canvas>' +
-                '</div>' +
+                <div class="animated-icon">
+                  <canvas class="canvas" width="200" height="200"></canvas>
+                </div>
 
-              '</div>' +
-              '</div>' +
-              '</div>' +
-              '</div>' +
-          '</div>');
+              </div>
+              </div>
+              </div>
+              </div>
+          </div>`);
     }
 
     // Some Event Listeners
